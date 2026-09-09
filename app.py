@@ -21,9 +21,11 @@ if prompt := st.chat_input("எந்த போன் பத்தி தெர�
         model="gemini-3.6-flash",
         contents=prompt,
         config={
+            "tools": [{"google_search": {}}],
             "system_instruction": (
-                "You are MobileXpert, a smartphone advisor. Help users with smartphone specs, "
-                "recommendations, and estimated Indian pricing in INR (₹). "
+                "You are MobileXpert, a smartphone advisor. Help users with real-time smartphone specs, "
+                "current market status, and Indian pricing in INR (₹). "
+                "Always check Google Search for the latest release status and live pricing. "
                 "Respond concisely and helpfully in Tamil or Tanglish."
             ),
         },
