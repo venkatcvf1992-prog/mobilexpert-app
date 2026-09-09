@@ -18,7 +18,7 @@ if prompt := st.chat_input("எந்த போன் பத்தி தெர�
     st.chat_message("user").write(prompt)
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.0-flash",
         contents=prompt,
         config={
             "system_instruction": (
